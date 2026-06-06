@@ -1,6 +1,6 @@
 ## Deployment Link - 
 
-# Store Rating Platform
+# Store Rating Platform - rapid development version / unpolished
 
 A minimalistic role-based web application built for users to submit, manage, and view ratings for registered stores.
 
