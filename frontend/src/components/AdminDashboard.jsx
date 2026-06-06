@@ -12,8 +12,8 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem('token');
       const [usersRes, storesRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/admin/users', { headers: { Authorization: `Bearer ${token}` } }),
-        axios.get('http://localhost:5000/api/stores', { headers: { Authorization: `Bearer ${token}` } })
+        axios.get('https://roxiler-challenge.onrender.com/api/admin/users', { headers: { Authorization: `Bearer ${token}` } }),
+        axios.get('https://roxiler-challenge.onrender.com/api/stores', { headers: { Authorization: `Bearer ${token}` } })
       ]);
       setUsers(usersRes.data);
       setStores(storesRes.data);
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/admin/users', formData, {
+      await axios.post('https://roxiler-challenge.onrender.com/api/admin/users', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert('User/Store added successfully!');

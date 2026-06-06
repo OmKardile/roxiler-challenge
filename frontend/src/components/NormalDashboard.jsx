@@ -9,7 +9,7 @@ export default function NormalDashboard({ user }) {
   const fetchStores = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/stores', {
+      const res = await axios.get('https://roxiler-challenge.onrender.com/api/stores', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setStores(res.data);
@@ -28,7 +28,7 @@ export default function NormalDashboard({ user }) {
     
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/ratings', {
+      await axios.post('https://roxiler-challenge.onrender.com/api/ratings', {
         store_id: storeId,
         rating: rating
       }, {

@@ -8,7 +8,7 @@ export default function StoreDashboard({ user }) {
     const fetchDashboard = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/store/dashboard', {
+        const res = await axios.get('https://roxiler-challenge.onrender.com/api/store/dashboard', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setData(res.data);

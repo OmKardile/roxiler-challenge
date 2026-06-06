@@ -9,7 +9,7 @@ export default function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/signup', formData);
+      await axios.post('https://roxiler-challenge.onrender.com/api/signup', formData);
       alert('Registration successful! You can now login.');
       navigate('/');
     } catch (err) {
